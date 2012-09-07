@@ -12,7 +12,7 @@
       
         // Diashow initialisieren
         initDiashow('pic/', '#diashow', 2, 2000); 
-      
+        
       });
     </script>
     
@@ -26,24 +26,33 @@
     <div class="container">
 	    <div class="row">
 	      <div class="span4">
-	        <div class="well" style="height:150px;">
-	          Weltuhr
-	        </div>
-	        <div class="well" style="height:150px;">
-            Wetter
-          </div>
-          <div class="well" style="height:150px;">
-            ???
+          <div class="well">
+            <iframe name="calendar" src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=500&amp;wkst=2&amp;hl=en&amp;bgcolor=%23cccccc&amp;src=j68rfbc49hrdnt7rqen29gcf24%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FNew_York" style=" border-width:0 " width="330" height="480" frameborder="0" scrolling="no"></iframe>
           </div>
 	      </div>
 	      <div class="span8 " id="diashow">
 	        <div class="well">
-			      <div class="pics">
+			      <div class="pics" style="height: 485px; overflow: hidden;">
 			        <img class="a" />
 			        <img class="b" />
 			      </div>
 		      </div>
 		    </div>
+        <div class="span4">
+          <div class="well" style="height:150px;">
+            Weltuhr
+          </div>
+        </div>
+        <div class="span4">
+          <div class="well" style="height:150px;">
+            Wetter
+          </div>
+        </div>
+        <div class="span4">
+          <div class="well" style="height:150px;">
+            ???
+          </div>
+        </div>
 	    </div>
 	    <div class="row">
 	      <div class="span6">
