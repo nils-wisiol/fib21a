@@ -6,12 +6,18 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script src="js/diashow.js"></script>
+    <script src="js/worldclock.js"></script>
     <script type="text/javascript">
       /** Initialisierung */
       $(document).ready(function($) {
       
         // Diashow initialisieren
-        initDiashow('pic/', '#diashow', 2, 2000); 
+        initDiashow('pic/', '#diashow', 2, 2000);
+        
+        // Weltuhr initialisieren
+        initWorldclock('#worldclock-edt', -4 * 60);
+        initWorldclock('#worldclock-cest', 2 * 60);
+        initWorldclock('#worldclock-utcP8', 8 * 60);
         
       });
     </script>
@@ -40,7 +46,11 @@
 		    </div>
         <div class="span4">
           <div class="well" style="height:150px;">
-            Weltuhr
+            <div id="worldclock">
+              Buffalo: <span id="worldclock-edt"></span><br/>
+              Würzburg: <span id="worldclock-cest"></span><br/>
+              Macao: <span id="worldclock-utcP8"></span>
+            </div>
           </div>
         </div>
         <div class="span4">
