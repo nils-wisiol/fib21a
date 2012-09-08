@@ -11,50 +11,73 @@
       $(document).ready(function($) {
       
         // Diashow initialisieren
-        initDiashow('pic/', '#diashow', 2, 2000); 
+        initDiashow('pic/', '#diashow', 1, 2000); 
         
       });
+      
+      // this strange block of code exists to make sure the clocks are started as soon as
+      // possible as the page loads, rather than always waiting for a
+      // $(document).ready() as I normally do...
+      var bScriptLoaded       = false;
+      var bDOMLoaded          = false;
+      var bClocksInitialised  = false;
+
+      function ClockInit() {
+          if ((bClocksInitialised != true) && (bDOMLoaded == true) && (bScriptLoaded == true)) {
+              bClocksInitialised = true;
+              oClockAnalog.fInit();
+              oClockDigital.fInit();
+          }
+      }
     </script>
+    <script src="js/css-clock.js"></script>
     
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <style type="text/css">
       div#diashow div.pics img { width: 100%; }
+      /* code: css clocks */
+			#cssclock { height: 270px; }
+			#clockanalog { background: #012345 url("img/analog.gif") no-repeat 0 0; float: left; height: 250px; margin: 0; overflow: hidden; position: relative; width: 250px; }
+			#clockanalog img { border: 0; left: 0px; position: absolute; top: 0px; }
+			#clockdigital { background: #012345 url("img/digital.gif") no-repeat 162px 99px; float: right; height: 250px; margin: 0; overflow: hidden; padding: 0; position: relative; width: 485px; }
+			#clockdigital div { background: #012345; height: 88px; position: absolute; width: 485px; }
+			#clockdigital div:last-child { bottom: 0; }
+			#clockdigital img { border: 0; display: block; height: 2000px; left: -1553px; margin: 0; padding: 0; position: absolute; top: -867px; width: 2000px; max-width: none }
     </style>
   </head>
   <body>
-    <div class="container">
-	    <div class="row">
-	      <div class="span4">
-          <div class="well">
-            <iframe name="calendar" src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=500&amp;wkst=2&amp;hl=en&amp;bgcolor=%23cccccc&amp;src=j68rfbc49hrdnt7rqen29gcf24%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FNew_York" style=" border-width:0 " width="330" height="480" frameborder="0" scrolling="no"></iframe>
+    <div class="container" style="height:1050px; width:1680px; background-color:#ddd">
+      <div class="row-fluid">
+        <div class="span5">
+          <div class="well" style="height:200px">
+            <div id="cssclock"><div id="clockanalog"><img src="img/analogseconds.png" id="analogsecond" alt="Clock second-hand" style="-webkit-transform: rotate(208deg); "><img src="img/analogminutes.png" id="analogminute" alt="Clock minute-hand" style="-webkit-transform: rotate(88deg); "><img src="img/analoghours.png" id="analoghour" alt="Clock hour-hand" style="-webkit-transform: rotate(697deg); "></div><div id="clockdigital"><img src="img/digitalhours.gif" id="digitalhour" alt="Clocks hours" style="-webkit-transform: rotate(15deg); "><img src="img/digitalminutes.gif" id="digitalminute" alt="Clocks minutes" style="-webkit-transform: rotate(276deg); "><img src="img/digitalseconds.gif" id="digitalsecond" alt="Clocks seconds" style="-webkit-transform: rotate(152deg); "><div style="opacity: 0.8; ">&nbsp;</div><div style="opacity: 0.8; ">&nbsp;</div></div></div>
           </div>
-	      </div>
-	      <div class="span8 " id="diashow">
+          <div class="row-fluid">
+            <div class="row-fluid">
+			        <div class="span5">
+			          <div class="well" style="height:400px;">
+			            <script src="http://weather.webmart.net/e/2371464"></script>
+			          </div>
+			        </div>
+			        <div class="span7">
+			          <div class="well">
+			            <iframe name="calendar" src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=500&amp;wkst=2&amp;hl=en&amp;bgcolor=%23cccccc&amp;src=j68rfbc49hrdnt7rqen29gcf24%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FNew_York" style=" border-width:0 " width="330" height="400" frameborder="0" scrolling="no"></iframe>
+			          </div>
+			        </div>        
+          </div>
+        </div>
+        </div>
+	      <div class="span7" id="diashow">
 	        <div class="well">
-			      <div class="pics" style="height: 485px; overflow: hidden;">
-			        <img class="a" />
-			        <img class="b" />
-			      </div>
-		      </div>
-		    </div>
-        <div class="span4">
-          <div class="well" style="height:150px;">
-            Weltuhr
-          </div>
-        </div>
-        <div class="span4">
-          <div class="well" style="height:150px;">
-            Wetter
-          </div>
-        </div>
-        <div class="span4">
-          <div class="well" style="height:150px;">
-            ???
-          </div>
-        </div>
+	          <div class="pics" style="height: 692px; overflow: hidden;">
+	            <img class="a" />
+	            <img class="b" />
+	          </div>
+	        </div>
+	      </div>
 	    </div>
-	    <div class="row">
+	    <div class="row-fluid">
 	      <div class="span6">
 	        <div class="well">
 	          ???
@@ -67,7 +90,7 @@
         </div>
         <div class="span3">
           <div class="well">
-            ???
+            Test
           </div>
         </div>
 	    </div>
