@@ -15,6 +15,7 @@ function initWorldclock(div, offset) {
  * div: div-Element, in dem die Weltuhr gezeigt wird. 
  */
 function tickWorldclock(div) {
+	setTimeout('tickWorldclock("' + div + '")', 1000);
 	var offset = $(div).attr('data-offset');
 	var time = new Date();
 	time.setUTCMinutes(time.getUTCMinutes() + new Date().getTimezoneOffset() + parseInt(offset));
@@ -22,5 +23,4 @@ function tickWorldclock(div) {
 	currentMinute = (time.getMinutes() < 10 ? "0" : "") + time.getMinutes();
 	currentSecond = (time.getSeconds() < 10 ? "0" : "") + time.getSeconds();
 	$(div).html(currentHour + '<span class="seperator">:</span>' + currentMinute + '<span class="seperator">:</span>' + currentSecond);
-	setTimeout('tickWorldclock("' + div + '")', 1000);
 }
