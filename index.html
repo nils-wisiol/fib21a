@@ -9,6 +9,7 @@
     <script src="js/worldclock.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/greeting.js"></script>
+    <script src="js/currentlyplaying.js"></script>
     <script type="text/javascript">
       /** Initialisierung */
       $(document).ready(function($) {
@@ -27,6 +28,9 @@
         // Begrüßung initialisieren
         greet('#greeting');
         
+        // "Sie hören gerade" initialisieren
+        initCurrentlyPlaying('#currentlyplaying-text');
+        
       });
     </script>
     
@@ -41,6 +45,10 @@
       span.seperator { color: #56789A; }
       span.unit { color: #333 }
       .well { border: none; }
+      
+      #currentlyplaying { background: #25770F; color: #DDD; text-transform: uppercase; padding-left: 0px; padding-right: 0px; font-size: 23px; }
+      #currentlyplaying .ampache { font-weight: bold; padding: 0px 15px; }
+      
     </style>
   </head>
   <body>
@@ -93,8 +101,8 @@
           </div>
         </div>
         <div class="span3">
-          <div class="well">
-            Test
+          <div class="well" id="currentlyplaying">
+            <marquee id="currentlyplaying-text"></marquee>
           </div>
         </div>
 	    </div>
