@@ -11,7 +11,7 @@ function greet(div) {
 	if (time.getHours() > 4 && time.getHours() <= 12)
 		greeting = "Good Morning";
 	else if (time.getHours() > 12 && time.getHours() <= 18)
-		greeing = "Have a Nice Day";
+		greeting = "Have a Nice Day";
 	else if (time.getHours() > 18 && time.getHours() <= 22)
 		greeting = "Good Evening";
 	else if (time.getHours() > 22 || time.getHours() < 4)
