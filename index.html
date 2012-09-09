@@ -46,8 +46,11 @@
       span.unit { color: #333 }
       .well { border: none; }
       
-      #currentlyplaying { background: #25770F; color: #DDD; text-transform: uppercase; padding-left: 0px; padding-right: 0px; font-size: 23px; }
-      #currentlyplaying .ampache { font-weight: bold; padding: 0px 15px; }
+      #currentlyplaying { background: #25770F; color: #CCC; text-transform: uppercase; font-size: 23px; padding-top: 5px; }
+      #currentlyplaying .ampache { font-weight: bold; padding: 0px 15px; display: block; }
+      #currentlyplaying .ampache-title { color: #FFF; }
+      #currentlyplaying .ampache-album { font-size: 0.7em; }
+      #currentlyplaying .ampache-artist { font-size: 0.8em; }
       
     </style>
   </head>
@@ -102,7 +105,8 @@
         </div>
         <div class="span3">
           <div class="well" id="currentlyplaying">
-            <marquee id="currentlyplaying-text"></marquee>
+            <h4>currently playing</h4>
+            <h4 id="currentlyplaying-text"></h4>
           </div>
         </div>
 	    </div>
