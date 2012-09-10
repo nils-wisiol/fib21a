@@ -1,0 +1,32 @@
+body { background: red; }
+
+.agenda .date-label,
+.view-cap,
+.agenda-scrollboxBoundary,
+.view-container-border,
+.agenda,
+.agenda .scrollbox {
+	background: #eede13;
+}
+
+.agenda .event,
+.agenda .day {
+	border-top-color: #aa7E03;
+	border-bottom-color: #aa7E03;
+}
+
+.agenda .scrollbox {
+	overflow: hidden;
+}
+
+#footer1 {
+	display: none;
+}
+
+#viewContainer1 {
+	height: 396px;
+}
+
+#agendaEventContainer1 {
+	width: 368px;
+}
