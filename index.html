@@ -35,7 +35,7 @@
         
         // Kalender stylen
         $('iframe#calendar').ready(function() {
-            setTimeout("styleIframe('calendar', 'css/calendar.css');", 30 * 1000);
+            setTimeout("styleIframe('calendar', 'css/calendar.css');", 3 * 1000);
         });
 
         // Fortune initialisieren
@@ -52,7 +52,7 @@
       #greeting { font-family: 'Merienda One', cursive; }
       div#diashow div.pics img { width: 100%; }
       span.seperator { color: #56789A; }
-      span.unit { color: #555 }
+      span.unit { color: #555; }
       #fortune pre { font-size: 23px; border: none; word-break: normal; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; display: inline; margin: 0; padding: 0;}
       .well { border: none; }
       
@@ -89,7 +89,7 @@
 			        </div>
 			        <div class="span7">
 			          <div class="well" style="background: #EEDE13; padding: 2px 0px 2px 7px; overflow: hidden;">
-			            <iframe id="calendar" name="calendar" src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=500&amp;wkst=2&amp;hl=en&amp;bgcolor=%23eede13&amp;src=j68rfbc49hrdnt7rqen29gcf24%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FNew_York" style=" border-width:0 " width="370" height="250" frameborder="0" scrolling="no"></iframe>
+			            <iframe id="calendar" name="calendar" src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=500&amp;wkst=2&amp;hl=en&amp;bgcolor=%23eede13&amp;src=j68rfbc49hrdnt7rqen29gcf24%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FNew_York" style=" border-width:0 " width="310" height="250" frameborder="0" scrolling="no"></iframe>
 			          </div>
 			        </div>
 			        <div class="span7">
@@ -112,20 +112,18 @@
 	          </div>
 	        </div>
 	      </div>
+	      <div class="span1">
+	       <div class="well" style="height:770px; background-color: #222; text-align: center">
+  	       <span id="countdown-1" style="font-size:44px; font-weight: bold; line-height: 100%; color: #56789A; display: block; -webkit-transform: rotate(90deg); margin-top: 5px;"></span>
+	       </div>
+	      </div>
 	    </div>
 	    <div class="row-fluid">
 	      <div class="span6">
-	        <div class="well" style="background-color: #222; text-align: center">
-            <span id="countdown-1" style="font-size:44px; font-weight: bold; line-height: 100%; color: #56789A;"></span>
+	        <div class="well">
+	         <span id="fortune"></span>
           </div>
         </div>
-	    </div>
-	    <div class="row-fluid">
-	     <div class="span6">
-	       <div class="well">
-	         <span id="fortune"></span>
-	       </div>
-	     </div>
 	    </div>
     </div>
   </body>
