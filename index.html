@@ -20,9 +20,10 @@
         initDiashow('pic/', '#diashow', 2, 60 * 1000);
         
         // Weltuhr initialisieren
-        initWorldclock('#worldclock-edt', -4 * 60);
-        initWorldclock('#worldclock-cest', 2 * 60);
-        initWorldclock('#worldclock-utcP8', 8 * 60);
+        initWorldclock('#worldclock-edt', -4 * 60); // Buffalo
+        initWorldclock('#worldclock-cest', 2 * 60); // Würzburg
+        //initWorldclock('#worldclock-utcP8', 8 * 60); // Macao
+        initWorldclock('#worldclock-utcP8', 7 * 60); // Bangkok
         
         // Countdown initialisieren
         initCountdown('#countdown-1', 2012, 11, 14, 0, 0, 0);
@@ -72,7 +73,7 @@
               <div id="worldclock" style="color:#ABCDEF; position: relative; height: 275px;">
                 <span style="position:absolute; font-size: 40px; left: 300px; top: 125px">BUFFALO</span>
                 <span style="position:absolute; font-size: 20px; left: 85px; top: 250px">W&Uuml;RZBURG</span>
-                <span style="position:absolute; font-size: 20px; left: 410px; top: 250px">MACAU</span>
+                <span style="position:absolute; font-size: 20px; left: 410px; top: 250px">BANGKOK</span>
                 <div style="width: 480px; margin: auto; position: relative;">
                   <span id="worldclock-edt" style="font-size:120px; font-weight: bold; line-height: 100%;"></span>
                   <span id="worldclock-cest" style="font-size:50px; font-weight: bold; display: inline-block; margin-top:95px"></span>
