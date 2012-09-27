@@ -76,7 +76,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
               <div id="worldclock" style="color:#ABCDEF; position: relative; height: 275px;">
                 <span style="position:absolute; font-size: 40px; left: 300px; top: 125px">BUFFALO</span>
                 <span style="position:absolute; font-size: 20px; left: 85px; top: 250px">W&Uuml;RZBURG</span>
-                <span style="position:absolute; font-size: 20px; left: 410px; top: 250px">BANGKOK</span>
+                <span style="position:absolute; font-size: 20px; left: 386px; top: 250px">BANGKOK</span>
                 <div style="width: 480px; margin: auto; position: relative;">
                   <span id="worldclock-edt" style="font-size:120px; font-weight: bold; line-height: 100%;"></span>
                   <span id="worldclock-cest" style="font-size:50px; font-weight: bold; display: inline-block; margin-top:95px"></span>
