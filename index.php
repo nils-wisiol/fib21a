@@ -20,7 +20,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
       $(document).ready(function($) {
       
         // Diashow initialisieren
-        initDiashow('pic/', '#diashow', 2, 60 * 1000);
+        initDiashow('<?php if (file_exists('diashowpath.txt')) { include('diashowpath.txt'); } else { echo "img/diashow-default.png"; } ?>', '#diashow', 2, 60 * 1000);
         
         // Weltuhr initialisieren
         initWorldclock('#worldclock-edt', -4 * 60); // Buffalo
