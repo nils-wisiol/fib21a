@@ -24,8 +24,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
         
         // Weltuhr initialisieren
         initWorldclock('#worldclock-edt', -4 * 60); // Buffalo
-        //initWorldclock('#worldclock-cest', 2 * 60); // Würzburg
-        initWorldclock('#worldclock-cest', -7 * 60); // Portland, OR
+        initWorldclock('#worldclock-cest', 2 * 60); // Würzburg
         initWorldclock('#worldclock-utcP8', 8 * 60); // Macao
         //initWorldclock('#worldclock-utcP8', 7 * 60); // Bangkok
         
