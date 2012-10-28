@@ -24,7 +24,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
         
         // Weltuhr initialisieren
         initWorldclock('#worldclock-edt', -4 * 60); // Buffalo
-        initWorldclock('#worldclock-cest', 2 * 60); // Würzburg
+        initWorldclock('#worldclock-cet', 1 * 60); // Würzburg, Winterzeit
         initWorldclock('#worldclock-utcP8', 8 * 60); // Macao
         //initWorldclock('#worldclock-utcP8', 7 * 60); // Bangkok
         
@@ -79,7 +79,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
                 <span style="position:absolute; font-size: 20px; left: 413px; top: 250px">MACAO</span>
                 <div style="width: 480px; margin: auto; position: relative;">
                   <span id="worldclock-edt" style="font-size:120px; font-weight: bold; line-height: 100%;"></span>
-                  <span id="worldclock-cest" style="font-size:50px; font-weight: bold; display: inline-block; margin-top:95px"></span>
+                  <span id="worldclock-cet" style="font-size:50px; font-weight: bold; display: inline-block; margin-top:95px"></span>
                   <span id="worldclock-utcP8" style="font-size:50px; font-weight: bold; display: inline-block; margin-top:95px; position:absolute; right:0;"></span>
                 </div>
               </div>
