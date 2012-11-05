@@ -10,6 +10,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script src="js/diashow.js"></script>
     <script src="js/worldclock.js"></script>
+    <script src="js/date.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/greeting.js"></script>
     <script src="js/currentlyplaying.js"></script>
@@ -26,6 +27,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
         initWorldclock('#worldclock-est', -5 * 60); // Buffalo, Winterzeit
         initWorldclock('#worldclock-cet', 1 * 60); // Würzburg, Winterzeit
         initWorldclock('#worldclock-utcP8', 8 * 60); // Macao
+        initDate('#worldclock-date', -5 * 60); // Buffalo Datum
         //initWorldclock('#worldclock-utcP8', 7 * 60); // Bangkok
         
         // Countdown initialisieren
@@ -74,6 +76,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
         <div class="span4">
           <div class="well" style="background-color: #002345">
               <div id="worldclock" style="color:#ABCDEF; position: relative; height: 275px;">
+                <span style="position:absolute; font-size: 33px; left: 356px; top: 160px; color: #56789A;" id="worldclock-date">01.01.70</span>
                 <span style="position:absolute; font-size: 40px; left: 300px; top: 125px">BUFFALO</span>
                 <span style="position:absolute; font-size: 20px; left: 85px; top: 250px">W&Uuml;RZBURG</span>
                 <span style="position:absolute; font-size: 20px; left: 413px; top: 250px">MACAO</span>
