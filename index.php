@@ -24,10 +24,10 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
         initDiashow('<?php if (file_exists('diashowpath.txt')) { include('diashowpath.txt'); } else { echo "img/diashow-default.png"; } ?>', '#diashow', 2, 60 * 1000);
         
         // Weltuhr initialisieren
-        initWorldclock('#worldclock-est', -5 * 60); // Buffalo, Winterzeit
+        initWorldclock('#worldclock-est', -4 * 60); // Buffalo, Sommerzeit
         initWorldclock('#worldclock-cet', 1 * 60); // Würzburg, Winterzeit
         initWorldclock('#worldclock-utcP8', 8 * 60); // Macao
-        initDate('#worldclock-date', -5 * 60); // Buffalo Datum
+        initDate('#worldclock-date', -4 * 60); // Buffalo Datum
         //initWorldclock('#worldclock-utcP8', 7 * 60); // Bangkok
         
         // Countdown initialisieren
