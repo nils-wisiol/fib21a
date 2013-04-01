@@ -31,7 +31,7 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
         //initWorldclock('#worldclock-utcP8', 7 * 60); // Bangkok
         
         // Countdown initialisieren
-        initCountdown('#countdown-1', 2012, 11, 14, 0, 0, 0);
+        initCountdown('#countdown-1', 2013, 4, 19, 21, 0, 0);
         
         // Begrüßung initialisieren
         greet('#greeting');
